@@ -70,7 +70,7 @@ spec:
         app: contact-management
     spec:
       containers:
-        - image: deivycode/mrc-dev:contact-service-main
+        - image: deivycode/mrc-dev:contact-service
           imagePullPolicy: Always
           name: contacts-service
           ports:
@@ -101,7 +101,7 @@ spec:
         app: auth-service
     spec:
       containers:
-        - image: deivycode/mrc-dev:auth-service-main
+        - image: deivycode/mrc-dev:auth-service
           imagePullPolicy: Always
           name: auth-service
           ports:
