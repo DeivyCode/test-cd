@@ -26,32 +26,30 @@ spec:
 
 ---
 # Ingress
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: ingress
-# spec:
-#   ingressClassName: nginx
-#   rules:
-#     - host: contact-management.dev
-#       http:
-#         paths:
-#           - path: /api/v1/contact/?(.*)
-#             pathType: ImplementationSpecific 
-#             backend:
-#               service:
-#                 name: cip-service1
-#                 port:
-#                   number: 80
-#           - path: /api/v1/auth/?(.*)
-#             pathType: ImplementationSpecific
-#             backend:
-#               service:
-#                 name: cip-service2
-#                 port:
-#                   number: 80
-#   externalIPs:
-#     - 
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: contact-management.dev
+      http:
+        paths:
+          - path: /api/v1/contact/?(.*)
+            pathType: ImplementationSpecific 
+            backend:
+              service:
+                name: cip-service1
+                port:
+                  number: 80
+          - path: /api/v1/auth/?(.*)
+            pathType: ImplementationSpecific
+            backend:
+              service:
+                name: cip-service2
+                port:
+                  number: 80
 
 ---
 # Deployment
