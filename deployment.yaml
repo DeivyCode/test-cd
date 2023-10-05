@@ -71,7 +71,7 @@ spec:
         app: contact-management
     spec:
       containers:
-        - image: deivycode/mrc-dev:contact-service-6f46027a65449e442b635769da54238ffb6cbb7c
+        - image: deivycode/mrc-dev:contact-service-5d3aab5264987b787810b67a97beda2ff65e03b0
           imagePullPolicy: Always
           name: contacts-service
           ports:
